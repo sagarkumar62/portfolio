@@ -47,7 +47,7 @@ const ProjectsPage = () => {
               />
               <ProjectCard
                 title="Your Mini Shop"
-                description="A mini e-commerce shop project deployed on Netlify. Browse products and experience the shop."
+              description="A mini e-commerce shop project deployed on Netlify. Browse products and experience the shop."
                 url="https://yourminishop.netlify.app/"
                 image="/salsa.png"
               />
@@ -55,7 +55,7 @@ const ProjectsPage = () => {
             <div className="flex flex-row flex-wrap justify-center items-stretch gap-6">
               <ProjectCard
                 title="Sidcup Family"
-                description="A family and community website project. Explore the features and design by visiting the site."
+              description="A family and community website project. Explore the features and design by visiting the site."
                 url="https://sagarkumar62.github.io/sidcupfamily/"
                 image="/sidcup.png" // Replace with actual image if available, else will show placeholder
               />

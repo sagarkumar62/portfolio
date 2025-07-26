@@ -9,7 +9,7 @@ import { Canvas } from "@react-three/fiber"
 import { Points, PointMaterial } from "@react-three/drei"
 import { Suspense, useRef, useMemo } from "react"
 import { useFrame } from "@react-three/fiber"
-import { ChevronDown, Mail, Github } from "lucide-react"
+import { Mail, Github } from "lucide-react"
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
@@ -99,7 +99,7 @@ export default function Portfolio() {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Finding the right developer to bring your digital vision to life can be challenging. That's where I come in.
+            Finding the right developer to bring your digital vision to life can be challenging. That&apos;s where I come in.
             As a specialized Frontend Developer with Three.js expertise, I create immersive web experiences that connect
             brands with their audiences, driving engagement and delivering measurable results.
           </p>
@@ -220,7 +220,7 @@ export default function Portfolio() {
             Digital Presence?
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-            Let's discuss your project and create something extraordinary together. Get in touch for a free
+            Let&apos;s discuss your project and create something extraordinary together. Get in touch for a free
             consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
