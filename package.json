@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.11.6",
     "@radix-ui/react-slot": "^1.2.3",
     "@react-three/drei": "^10.6.0",
     "@react-three/fiber": "^9.2.0",
