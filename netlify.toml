@@ -1,6 +1,17 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = "out" # or "dist" or ".next" depending on your framework (Next.js → .next)
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+[build.environment]
+  # Tells Netlify these keys are safe even if found in the build output
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_EMAILJS_USER_ID,NEXT_PUBLIC_EMAILJS_SERVICE_ID,NEXT_PUBLIC_EMAILJS_TEMPLATE_ID"
+
+  # Optional: define environment variables locally for build fallback
+  NEXT_PUBLIC_EMAILJS_USER_ID = "ZZnQborYt46FJ8veQ"
+  NEXT_PUBLIC_EMAILJS_SERVICE_ID = "your_service_id"
+  NEXT_PUBLIC_EMAILJS_TEMPLATE_ID = "your_template_id"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
