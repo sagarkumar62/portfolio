@@ -41,7 +41,7 @@ const ContactPage = () => {
     <div className="min-h-screen bg-black text-white flex flex-col">
       <Header />
       <div className="flex-1 w-full flex flex-col items-center justify-center pt-32">
-        <h1 className="text-5xl font-bold mb-6">Contact</h1>
+        <h1 className="text-5xl font-bold mb-6">Connect</h1>
         <p className="text-lg text-gray-400 mb-8">Get in touch with me for collaborations, project inquiries, or just to say hello!</p>
         <form ref={form} onSubmit={sendEmail} className="bg-gray-900 border border-gray-800 rounded-lg p-8 w-full max-w-md shadow-lg flex flex-col gap-4">
           <input name="name" type="text" required placeholder="Your Name" className="bg-black border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-purple-500" />

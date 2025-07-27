@@ -1,5 +1,5 @@
 "use client";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, Mail, Linkedin, Instagram, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -36,12 +36,33 @@ const Header = () => {
             <Link href="/projects" className="text-gray-300 hover:text-white transition-colors">
               Projects
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-white transition-colors flex items-center">
-              Contact <ChevronDown className="w-4 h-4 ml-1" />
+            <div className="relative group">
+              <button className="text-gray-300 hover:text-white transition-colors flex items-center focus:outline-none">
+                Contact <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <div className="absolute right-0 mt-2 w-56 bg-black/95 border border-gray-800 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto transition-opacity z-50">
+                <a href="https://wa.me/916202823710" target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-900 hover:text-green-400 transition-colors">
+                  <MessageCircle className="w-5 h-5 mr-2 text-green-400" /> WhatsApp
+                </a>
+                <a href="mailto:pandeysagar7991@gmail.com" className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-900 hover:text-red-400 transition-colors">
+                  <Mail className="w-5 h-5 mr-2 text-red-400" /> Gmail
+                </a>
+                <a href="https://www.linkedin.com/in/sagar-kumarcs/" target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-900 hover:text-blue-400 transition-colors">
+                  <Linkedin className="w-5 h-5 mr-2 text-blue-400" /> LinkedIn
+                </a>
+                <a href="https://www.instagram.com/sagar_r72?igsh=MTJqOWE4MDc4cmQ2dA==" target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-900 hover:text-pink-400 transition-colors">
+                  <Instagram className="w-5 h-5 mr-2 text-pink-400" /> Instagram
+                </a>
+                <a href="tel:+916202823710" className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-900 hover:text-emerald-400 transition-colors">
+                  <Phone className="w-5 h-5 mr-2 text-emerald-400" /> Call
+                </a>
+              </div>
+            </div>
+            <Link href="/connect">
+              <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-2 rounded-full cursor-pointer">
+                GET STARTED
+              </Button>
             </Link>
-            <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-2 rounded-full">
-              GET STARTED
-            </Button>
           </div>
           {/* Mobile Hamburger */}
           <button
@@ -66,12 +87,33 @@ const Header = () => {
             <Link href="/projects" className="text-gray-300 hover:text-white transition-colors" onClick={() => setMobileOpen(false)}>
               Projects
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-white transition-colors flex items-center" onClick={() => setMobileOpen(false)}>
-              Contact <ChevronDown className="w-4 h-4 ml-1" />
+            <div className="relative group">
+              <button className="text-gray-300 hover:text-white transition-colors flex items-center w-full focus:outline-none">
+                Contact <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <div className="absolute right-0 mt-2 w-56 bg-black/95 border border-gray-800 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto transition-opacity z-50">
+                <a href="https://wa.me/916202823710" target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-900 hover:text-green-400 transition-colors">
+                  <MessageCircle className="w-5 h-5 mr-2 text-green-400" /> WhatsApp
+                </a>
+                <a href="mailto:pandeysagar7991@gmail.com" className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-900 hover:text-red-400 transition-colors">
+                  <Mail className="w-5 h-5 mr-2 text-red-400" /> Gmail
+                </a>
+                <a href="https://www.linkedin.com/in/sagar-kumarcs/" target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-900 hover:text-blue-400 transition-colors">
+                  <Linkedin className="w-5 h-5 mr-2 text-blue-400" /> LinkedIn
+                </a>
+                <a href="https://instagram.com/your_instagram" target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-900 hover:text-pink-400 transition-colors">
+                  <Instagram className="w-5 h-5 mr-2 text-pink-400" /> Instagram
+                </a>
+                <a href="tel:+916202823710" className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-900 hover:text-emerald-400 transition-colors">
+                  <Phone className="w-5 h-5 mr-2 text-emerald-400" /> Call
+                </a>
+              </div>
+            </div>
+            <Link href="/connect" className="w-full" onClick={() => setMobileOpen(false)}>
+              <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-2 rounded-full w-full">
+                GET STARTED
+              </Button>
             </Link>
-            <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-2 rounded-full w-full" onClick={() => setMobileOpen(false)}>
-              GET STARTED
-            </Button>
           </div>
         )}
       </nav>
