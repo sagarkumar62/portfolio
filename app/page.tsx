@@ -10,6 +10,7 @@ import { Points, PointMaterial } from "@react-three/drei"
 import { Suspense, useRef, useMemo } from "react"
 import { useFrame } from "@react-three/fiber"
 import { Mail, Github } from "lucide-react"
+import Link from "next/link";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
@@ -62,17 +63,14 @@ function Scene3D() {
 
 export default function Portfolio() {
   const clients = [
-    { name: "TechCorp", logo: "TC" },
-    { name: "Digital Solutions", logo: "DS" },
-    { name: "Innovation Labs", logo: "IL" },
-    { name: "Future Systems", logo: "FS" },
-    { name: "Creative Studio", logo: "CS" },
+    { name: "HumanswinningAI (Web Developer)", logo: "HW" },
+    { name: "TechieHelp (Intern)", logo: "TH" }
   ]
 
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Global Particle Background */}
-      <div className="fixed inset-0 z-0">
+      <div className="fixed inset-0 z-0 pointer-events-none">
         <Scene3D />
       </div>
 
@@ -99,17 +97,26 @@ export default function Portfolio() {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Finding the right developer to bring your digital vision to life can be challenging. That&apos;s where I come in.
-            As a specialized Frontend Developer with Three.js expertise, I create immersive web experiences that connect
-            brands with their audiences, driving engagement and delivering measurable results.
+            As a dedicated Frontend Developer skilled in React, Tailwind CSS, and JavaScript, I specialize in crafting user-friendly and visually engaging websites. From responsive layouts to dynamic interactions, I aim to build experiences that not only look good but also solve real user problems. I’m continuously exploring new tools and frameworks to push boundaries — currently diving into technologies like Three.js to take web experiences to the next level.
           </p>
 
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold"
+          <a
+            href="https://wa.me/916202823710"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
           >
-            REQUEST YOUR FREE CONSULTATION
-          </Button>
+            <Button
+              size="lg"
+              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center gap-2"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 14.487c-.246-.123-1.453-.718-1.678-.799-.225-.082-.389-.123-.553.123-.164.246-.633.799-.776.963-.143.164-.287.184-.533.062-.246-.123-1.037-.382-1.976-1.218-.73-.652-1.223-1.457-1.367-1.703-.143-.246-.015-.378.108-.5.111-.11.246-.287.369-.43.123-.143.164-.246.246-.41.082-.164.041-.308-.02-.43-.062-.123-.553-1.336-.757-1.832-.2-.48-.404-.415-.553-.423l-.47-.008c-.164 0-.43.062-.656.308-.225.246-.86.84-.86 2.048 0 1.208.88 2.377 1.002 2.541.123.164 1.73 2.645 4.2 3.603.588.202 1.045.322 1.402.412.59.15 1.127.129 1.552.078.474-.056 1.453-.594 1.658-1.168.205-.574.205-1.066.143-1.168-.062-.102-.225-.164-.47-.287z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 12c0-4.97-4.03-9-9-9s-9 4.03-9 9c0 1.591.417 3.086 1.144 4.382L3 21l4.755-1.244A8.963 8.963 0 0012 21c4.97 0 9-4.03 9-9z" />
+              </svg>
+              Contact on WhatsApp
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -122,13 +129,13 @@ export default function Portfolio() {
             your digital presence.
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-60">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 justify-center items-center content-center opacity-60">
             {clients.map((client, index) => (
-              <div key={index} className="flex flex-col items-center">
+              <div key={index} className="flex flex-col items-center justify-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-2">
                   <span className="text-white font-bold text-lg">{client.logo}</span>
                 </div>
-                <span className="text-gray-400 text-sm font-medium">{client.name}</span>
+                <span className="text-gray-400 text-sm font-medium text-center">{client.name}</span>
               </div>
             ))}
           </div>
@@ -224,27 +231,38 @@ export default function Portfolio() {
             consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-purple-900 hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-semibold"
+            <Link href="/contact" passHref legacyBehavior>
+              <Button
+                size="lg"
+                className="bg-white text-purple-900 hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-semibold cursor-pointer"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Start Your Project
+              </Button>
+            </Link>
+            <a
+              href="https://github.com/sagarkumar62?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
             >
-              <Mail className="w-5 h-5 mr-2" />
-              Start Your Project
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 px-8 py-4 rounded-full text-lg font-semibold bg-transparent"
-            >
-              <Github className="w-5 h-5 mr-2" />
-              View My Work
-            </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white px-8 py-4 rounded-full text-lg font-semibold bg-transparent cursor-pointer"
+              >
+                <Github className="w-5 h-5 mr-2" />
+                View My Work
+              </Button>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <Footer />
+      <div className="relative z-30">
+        <Footer />
+      </div>
     </div>
   )
 }
