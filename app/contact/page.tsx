@@ -8,10 +8,7 @@ import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 
 
-export const metadata = {
-  title: "Contact - Sagar",
-  description: "Get in touch",
-};
+
 
 const ContactPage = () => {
   const form = useRef(null);
