@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export', // 👈 This is required for static export now
+  output: 'export', // ✅ Enables static site generation
   images: {
-    unoptimized: true, // 👈 Required if using images in static export
+    unoptimized: true, // ✅ Required if using <Image> with static export
   },
   experimental: {
     serverActions: true,
