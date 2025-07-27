@@ -36,6 +36,9 @@ const Header = () => {
             <Link href="/projects" className="text-gray-300 hover:text-white transition-colors">
               Projects
             </Link>
+            <a href="/SAGAR_RESUME.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+              Resume
+            </a>
             <div className="relative group">
               <button className="text-gray-300 hover:text-white transition-colors flex items-center focus:outline-none">
                 Contact <ChevronDown className="w-4 h-4 ml-1" />
@@ -55,6 +58,9 @@ const Header = () => {
                 </a>
                 <a href="tel:+916202823710" className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-900 hover:text-emerald-400 transition-colors">
                   <Phone className="w-5 h-5 mr-2 text-emerald-400" /> Call
+                </a>
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-900 hover:text-yellow-400 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 mr-2 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" /></svg> Resume
                 </a>
               </div>
             </div>
@@ -87,6 +93,9 @@ const Header = () => {
             <Link href="/projects" className="text-gray-300 hover:text-white transition-colors" onClick={() => setMobileOpen(false)}>
               Projects
             </Link>
+            <a href="/SAGAR_RESUME.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+              Resume
+            </a>
             <div className="relative group">
               <button className="text-gray-300 hover:text-white transition-colors flex items-center w-full focus:outline-none">
                 Contact <ChevronDown className="w-4 h-4 ml-1" />
@@ -107,6 +116,7 @@ const Header = () => {
                 <a href="tel:+916202823710" className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-900 hover:text-emerald-400 transition-colors">
                   <Phone className="w-5 h-5 mr-2 text-emerald-400" /> Call
                 </a>
+                
               </div>
             </div>
             <Link href="/connect" className="w-full" onClick={() => setMobileOpen(false)}>
