@@ -6,7 +6,7 @@ const nextConfig = {
     unoptimized: true, // ✅ Required if using <Image> with static export
   },
   experimental: {
-    serverActions: true,
+    serverActions: {},
   },
 };
 

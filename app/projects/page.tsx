@@ -1,6 +1,7 @@
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Image from "next/image";
 
 const ProjectCard = ({ title, description, url, image }: { title: string; description: string; url: string; image?: string }) => (
   <a
@@ -12,7 +13,7 @@ const ProjectCard = ({ title, description, url, image }: { title: string; descri
   >
     <div className="w-full h-40 bg-gray-800 rounded mb-4 flex items-center justify-center overflow-hidden">
       {image ? (
-        <img src={image} alt={title + ' image'} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+        <Image src={image} alt={title + ' image'} width={320} height={160} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
       ) : (
         <span className="text-gray-500">Image Placeholder</span>
       )}
